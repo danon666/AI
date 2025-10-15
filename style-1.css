@@ -1,0 +1,181 @@
+h1 {
+    display: inline-block;
+    text-align: center;
+    font-family: "BBH Sans Bartle";
+    font-size: 3em;
+    letter-spacing: 2px;
+    color: #3E2C00;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    margin: 0 auto;
+    padding: 20px 40px;
+    border: 4px double #8C6B4F;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+h2 {
+    font-family: "Roboto Condensed";
+    color: #5C3D2E;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-family: "Playfair Display";
+    color: #6B4E31;
+    margin-top: 25px;
+}
+
+p {
+    font-family: "Barlow";
+    color: #3E2C00;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+li {
+    font-family: "Share Tech";
+    padding-bottom: 30px;
+    list-style-type: none;
+    background-color: #f8f2e7;
+    border-radius: 12px;
+    margin: 15px 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 3px solid #C2A891;
+    outline: 2px double #EBD9C2;
+    outline-offset: 3px;
+}
+
+body {
+    background: linear-gradient(to bottom, #f8e4c1, #f5cf90);
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+header {
+    background: linear-gradient(135deg, #A27B5C, #C2A891);
+    color: #fff;
+    height: auto;
+    padding: 30px 10%;
+    box-shadow: 0 4px 100px rgba(46, 41, 200, 0.2);
+    text-align: center;
+}
+
+main {
+    background-color: #EDC988;
+    width: 50%;
+    float: left;
+    padding: 40px;
+    height: auto;
+    box-sizing: border-box;
+    background-image: url(bg1.png);
+    background-blend-mode: lighten;
+    background-size: cover;
+}
+
+section {
+    background-color: #DCD7C9;
+    width: 50%;
+    float: left;
+    padding: 40px;
+    height: auto;
+    box-sizing: border-box;
+    background-image: url("bg2.jpg");
+    background-size: cover;
+}
+
+img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 20px;
+    margin: 10px auto 30px auto;
+    display: block;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 5px solid #A27B5C;
+    outline: 3px double #EBD9C2;
+    outline-offset: 4px;
+}
+
+footer {
+    clear: both;
+    background: linear-gradient(90deg, #A27B5C, #8C6B4F);
+    text-align: center;
+    font-family: "BBH Sans Bartle";
+    color: #fff;
+    padding: 30px 0;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 1440px) {
+    header {
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.3em;
+    }
+
+    h2, h3 {
+        font-size: 1.2em;
+    }
+
+    main, section {
+        width: 100%;
+        float: none;
+        padding: 25px;
+    }
+
+    li {
+        width: 90%;
+        margin: 10px auto;
+        font-size: 1em;
+    }
+
+    img {
+        max-width: 90%;
+        margin: 15px auto;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+    footer {
+        font-size: 1em;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 375px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2, h3 {
+        font-size: 1em;
+    }
+
+    body {
+        font-size: 0.95em;
+    }
+
+    li {
+        font-size: 0.95em;
+        padding: 12px;
+    }
+
+    img {
+        max-width: 100%;
+        border-radius: 12px;
+    }
+}
