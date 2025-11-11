@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Mapa — puzzle 4x4</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-image/leaflet-image.js"></script>
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 12px; }
+        #top { display:flex; gap:12px; align-items:flex-start; }
+        #map { width: 640px; height: 360px; border: 1px solid #888; }
+        #controls { min-width: 260px; }
+        button { margin: 6px 0; padding:8px 10px; }
+
+        #desk {
+            margin-top: 12px;
+            display: flex;
+            gap: 20px;
+        }
+
+        #pool {
+            width: 360px;
+            min-height: 360px;
+            border: 2px dashed #aaa;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            padding: 6px;
+            align-content: flex-start;
+            background: #f7f7f7;
+        }
+        .piece {
+            width: 86px; height: 86px;
+            object-fit: cover;
+            border: 1px solid #666;
+            cursor: grab;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(4, 90px);
+            grid-template-rows: repeat(4, 90px);
+            gap: 6px;
+            width: 384px;
+            border: 2px solid #444;
+            padding: 6px;
+            background: linear-gradient(#fff, #eee);
+        }
+        .slot {
+            width: 90px; height: 90px;
+            border: 1px dashed #999;
+            display:flex; align-items:center; justify-content:center;
+            background: #fff;
+        }
+        .slot.correct { outline: 3px solid #3c9; }
+        .slot.wrong { outline: 3px solid #f66; }
+
+        #positionInfo { margin-top: 8px; }
+    </style>
+</head>
+<body>
+    <h2>Mapa + puzzle 4×4 (drag & drop)</h2>
+
+    <div id="top">
+        <div id="map"></div>
+
+        <div id="controls">
+            <button id="requestPerms">Zgoda</button>
+            <button id="btnMyLoc">Moja lokalizacja</button>
+            <div id="positionInfo">
+                <strong>Szerokość:</strong> <span id="latitude">—</span><br>
+                <strong>Długość:</strong> <span id="longitude">—</span>
+            </div>
+
+            <hr>
+
+            <button id="btnExport">Pobierz mapę</button>
+            <button id="btnDownloadFull" disabled>Pobierz PNG mapy</button>
+
+        </div>
+    </div>
+
+    <div id="desk">
+        <div id="pool" aria-label="Stół z potasowanymi kafelkami"></div>
+        <div id="grid" aria-label="Docelowa siatka 4x4"></div>
+    </div>
+
+    <canvas id="hiddenCanvas" style="display:none;"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
