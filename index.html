@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikacja Pogodowa - LAB D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplikacja Pogodowa</h1>
+        
+        <div class="search-box">
+            <div class="search-input-group">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    placeholder="Wpisz nazwę miasta, np. Gdańsk"
+                    autocomplete="off"
+                >
+                <button id="searchBtn">Pogoda</button>
+            </div>
+            <div class="error-message" id="errorMessage"></div>
+        </div>
+
+        <div class="loading" id="loading">Ładowanie danych</div>
+
+        <div class="weather-container" id="weatherContainer">
+            <div class="current-weather" id="currentWeather"></div>
+            <div class="forecast-container" id="forecastContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
